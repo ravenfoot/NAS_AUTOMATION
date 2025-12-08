@@ -1,0 +1,30 @@
+[Unit]
+Description=NAS Weekly Security Scan (ClamAV) 🕵️
+After=network.target local-fs.target clamav-daemon.service
+RequiresMountsFor=/mnt/storage
+
+[Service]
+Type=oneshot
+
+# Stop noisy / competing services before scan
+ExecStartPre=/usr/bin/systemctl stop minidlna.service
+ExecStartPre=/usr/bin/systemctl stop plexmediaserver.service
+
+# Main scan script
+ExecStart=/usr/local/sbin/nas_stage_clamav_scan.sh
+
+# Bring services back afterwards
+ExecStartPost=/usr/bin/systemctl start plexmediaserver.service
+ExecStartPost=/usr/bin/systemctl start minidlna.service
+
+# During this window, we LET IT WORK
+Nice=0
+CPUSchedulingPolicy=other
+CPUQuota=200%
+
+# Still fairly polite on disk I/O
+IOSchedulingClass=idle
+IOSchedulingPriority=7
+
+StandardOutput=journal
+StandardError=journal

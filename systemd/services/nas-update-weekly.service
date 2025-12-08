@@ -1,0 +1,9 @@
+[Unit]
+Description=NAS Weekly Update & Maintenance 🔄
+After=network.target local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/nas_stage_update.sh
+StandardOutput=journal
+StandardError=journal

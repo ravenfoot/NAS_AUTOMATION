@@ -1,0 +1,11 @@
+[Unit]
+Description=NAS Weekly Security Scan (ClamAV) – Tuesday 00:05 🕵️
+
+[Timer]
+# Run Tuesdays at 00:05 (exclusive heavy-scan window)
+OnCalendar=Tue *-*-* 00:05:00
+Persistent=true
+AccuracySec=5min
+
+[Install]
+WantedBy=timers.target

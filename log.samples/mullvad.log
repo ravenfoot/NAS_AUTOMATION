@@ -1,0 +1,7 @@
+[07/12/25 12:44:07] [INFO] 🛰️ Initiating Mullvad Cloak Diagnostic…
+[07/12/25 12:44:07] [INFO] ✅ Mullvad daemon active.
+[07/12/25 12:44:07] [SUCCESS] ✅ Cloak engaged. Interface wg0-mullvad present.
+[07/12/25 12:56:33] [INFO] 🛰️ Verifying cloaking device status...
+[07/12/25 12:56:33] [INFO] ✅ VPN Daemon running.
+[07/12/25 12:56:33] [WARNING] ⚠️ Interface wg0-mullvad missing. Attempting reconnection...
+[07/12/25 12:56:38] [CRITICAL] 🛑 Cloak failure. VPN interface could not be raised.

@@ -1,0 +1,33 @@
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.5 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [71.5 kB]
+Get:8 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1,627 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [175 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:12 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1,501 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [377 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:15 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7,156 B]
+Get:16 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [11.0 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Fetched 4,172 kB in 2s (2,570 kB/s)
+Reading package lists...
+--- RUN START: 07/12/25 12:48:54 ---
+Starting unattended upgrades script
+Allowed origins are: o=Ubuntu,a=noble, o=Ubuntu,a=noble-security, o=UbuntuESMApps,a=noble-apps-security, o=UbuntuESM,a=noble-infra-security
+Initial blacklist: 
+Initial whitelist (not strict): 
+No packages found that can be upgraded unattended and no pending auto-removals
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 15 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...

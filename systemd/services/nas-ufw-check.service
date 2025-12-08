@@ -1,0 +1,12 @@
+[Unit]
+Description=NAS Shield Verification (UFW) 🛡️
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/nas_stage_ufw_check.sh
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

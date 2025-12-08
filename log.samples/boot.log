@@ -1,0 +1,41 @@
+[07/12/25 12:43:18] [INFO] 🖖 Boot sequence initiated. Running diagnostics...
+[07/12/25 12:43:33] [INFO] 🖖 Boot sequence initiated. Running diagnostics...
+[07/12/25 12:43:33] [INFO] --- 🔍 Running Sensor Sweep (SMART) ---
+[07/12/25 12:43:33] [INFO] ✅ Drive /dev/sda reporting healthy.
+[07/12/25 12:43:33] [INFO] ✅ Drive /dev/sdb reporting healthy.
+[07/12/25 12:43:33] [INFO] ✅ Drive /dev/sdc reporting healthy.
+[07/12/25 12:43:34] [INFO] ✅ Drive /dev/sdd reporting healthy.
+[07/12/25 12:43:34] [INFO] ✅ Drive /dev/sde reporting healthy.
+[07/12/25 12:43:34] [INFO] ✅ System MMC /dev/mmcblk0 detected online.
+[07/12/25 12:43:34] [INFO] --- ℹ️ Verifying Cargo Manifest (Mounts) ---
+[07/12/25 12:43:34] [INFO] ✅ /mnt/nas_sys_core mounted and writable.
+[07/12/25 12:43:34] [INFO] ✅ /mnt/media mounted and writable.
+[07/12/25 12:43:34] [INFO] ✅ /mnt/backup mounted and writable.
+[07/12/25 12:43:34] [INFO] ✅ /mnt/storage mounted and writable.
+[07/12/25 12:43:34] [INFO] ✅ /mnt/media_ro mounted (RO verified).
+[07/12/25 12:43:34] [INFO] --- 📦 Btrfs Stasis Pod Integrity ---
+[07/12/25 12:43:34] [INFO] ✅ Btrfs device stats clean (zero errors).
+[07/12/25 12:43:34] [INFO] ✅ Btrfs pool optimal: 2 devices online.
+[07/12/25 12:43:34] [INFO] --- 🛡️ Integrity Check (fstab) ---
+[07/12/25 12:43:34] [INFO] ✅ /etc/fstab matches verified template.
+[07/12/25 12:43:34] [SUCCESS] ✅ All systems green. Boot verification complete.
+[07/12/25 12:56:27] [INFO] 🖖 Boot sequence initiated. Running diagnostics...
+[07/12/25 12:56:27] [INFO] --- 🔍 Running Sensor Sweep (SMART) ---
+[07/12/25 12:56:27] [INFO] ✅ Drive /dev/sda reporting healthy.
+[07/12/25 12:56:27] [INFO] ✅ Drive /dev/sdb reporting healthy.
+[07/12/25 12:56:27] [INFO] ✅ Drive /dev/sdc reporting healthy.
+[07/12/25 12:56:28] [INFO] ✅ Drive /dev/sdd reporting healthy.
+[07/12/25 12:56:28] [INFO] ✅ Drive /dev/sde reporting healthy.
+[07/12/25 12:56:28] [INFO] ✅ System MMC /dev/mmcblk0 detected online.
+[07/12/25 12:56:28] [INFO] --- ℹ️ Verifying Cargo Manifest (Mounts) ---
+[07/12/25 12:56:28] [INFO] ✅ /mnt/nas_sys_core mounted and writable.
+[07/12/25 12:56:28] [INFO] ✅ /mnt/media mounted and writable.
+[07/12/25 12:56:28] [INFO] ✅ /mnt/backup mounted and writable.
+[07/12/25 12:56:28] [INFO] ✅ /mnt/storage mounted and writable.
+[07/12/25 12:56:28] [INFO] ✅ /mnt/media_ro mounted (RO verified).
+[07/12/25 12:56:28] [INFO] --- 📦 Btrfs Stasis Pod Integrity ---
+[07/12/25 12:56:28] [INFO] ✅ Btrfs device stats clean (zero errors).
+[07/12/25 12:56:28] [INFO] ✅ Btrfs pool optimal: 2 devices online.
+[07/12/25 12:56:28] [INFO] --- 🛡️ Integrity Check (Fstab) ---
+[07/12/25 12:56:28] [INFO] ✅ /etc/fstab matches verified template.
+[07/12/25 12:56:28] [SUCCESS] ✅ All systems green. Boot verification complete.

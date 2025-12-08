@@ -1,0 +1,18 @@
+[Unit]
+Description=NAS Safe Shutdown Sequence 🛌
+Documentation=file:///usr/local/sbin/nas_stage_shutdown.sh
+# Ensure this runs before the system sends the final kill signal
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+# Ensure we run before the final unmount of the root/sys_core
+Before=umount.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/nas_stage_shutdown.sh
+TimeoutStartSec=90
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=shutdown.target reboot.target halt.target

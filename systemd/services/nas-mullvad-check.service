@@ -1,0 +1,13 @@
+[Unit]
+Description=NAS Cloaking Verification (Mullvad) 🛰️
+After=network-online.target mullvad-daemon.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/nas_stage_mullvad_check.sh
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=NAS Backup Integrity Check (Borg) 📦
+After=network.target local-fs.target
+RequiresMountsFor=/mnt/backup
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/nas_stage_borg_integrity.sh
+# We likely need root to read the passphrase file permissions
+User=root
+StandardOutput=journal
+StandardError=journal

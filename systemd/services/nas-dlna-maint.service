@@ -1,0 +1,10 @@
+[Unit]
+Description=NAS Media Maintenance (DLNA Refresh) 📺
+After=network.target local-fs.target
+RequiresMountsFor=/mnt/storage
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/nas_stage_dlna_maint.sh
+StandardOutput=journal
+StandardError=journal

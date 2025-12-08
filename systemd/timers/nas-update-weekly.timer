@@ -1,0 +1,11 @@
+[Unit]
+Description=NAS Weekly System Update (Sunday 01:00) 🛠️
+
+[Timer]
+# Run Sundays at 01:00
+OnCalendar=Sun *-*-* 01:00:00
+Persistent=true
+AccuracySec=5min
+
+[Install]
+WantedBy=timers.target

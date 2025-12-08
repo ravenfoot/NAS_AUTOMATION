@@ -1,0 +1,23 @@
+
+########################################
+# /etc/fstab — Filesystem Table (SANITISED EXAMPLE)
+########################################
+
+# ── SYSTEM ───────────────────────────────────────────────────────────────────────────────
+UUID=<ROOT_UUID>         /              ext4  defaults                                    0 1
+UUID=<EFI_UUID>          /boot/efi      vfat  defaults                                    0 1
+/swap.img                none           swap  sw                                          0 0
+
+# ── MEDIA DATA DISKS (base mounts) ───────────────────────────────────────────────────────
+UUID=<MEDIA_RO_UUID>     /mnt/media_ro  ext4  defaults,nofail                             0 2
+UUID=<MEDIA_RW_UUID>     /mnt/media     ext4  defaults,nofail                             0 2
+
+# ── BACKUP POOL (btrfs multi-device; mount once by FS UUID) ──────────────────────────────
+UUID=<BACKUP_BTRFS_UUID> /mnt/backup    btrfs defaults,nofail,compress=zstd,autodefrag    0 0
+
+# ── NAS CORE partition ──────────────────────────────────────────────────────────────────
+UUID=<NAS_SYS_CORE_UUID> /mnt/nas_sys_core   ext4  defaults,nofail                        0 2
+
+########################################
+# END
+########################################

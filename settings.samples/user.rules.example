@@ -1,0 +1,94 @@
+
+########################################
+# 1. Filter
+########################################
+
+:ufw-user-input - [0:0]
+:ufw-user-output - [0:0]
+:ufw-user-forward - [0:0]
+:ufw-before-logging-input - [0:0]
+:ufw-before-logging-output - [0:0]
+:ufw-before-logging-forward - [0:0]
+:ufw-user-logging-input - [0:0]
+:ufw-user-logging-output - [0:0]
+:ufw-user-logging-forward - [0:0]
+:ufw-after-logging-input - [0:0]
+:ufw-after-logging-output - [0:0]
+:ufw-after-logging-forward - [0:0]
+:ufw-logging-deny - [0:0]
+:ufw-logging-allow - [0:0]
+:ufw-user-limit - [0:0]
+
+########################################
+# 2. Tuple A
+########################################
+
+
+allow any 8200 0.0.0.0/0 any 0.0.0.0/0 in
+-A ufw-user-input -p tcp --dport 8200 -j ACCEPT
+-A ufw-user-input -p udp --dport 8200 -j ACCEPT
+
+########################################
+# 3. Tuple B
+########################################
+
+allow any 2049 0.0.0.0/0 any 0.0.0.0/0 in
+-A ufw-user-input -p tcp --dport 2049 -j ACCEPT
+-A ufw-user-input -p udp --dport 2049 -j ACCEPT
+
+########################################
+# 4. Tuple C
+########################################
+
+allow any 32400 0.0.0.0/0 any 0.0.0.0/0 in
+-A ufw-user-input -p tcp --dport 32400 -j ACCEPT
+-A ufw-user-input -p udp --dport 32400 -j ACCEPT
+
+########################################
+# 5. Tuple D
+########################################
+
+allow any 32765 0.0.0.0/0 any <LAN_SUBNET> in
+-A ufw-user-input -p tcp --dport 32765 -s <LAN_SUBNET> -j ACCEPT
+-A ufw-user-input -p udp --dport 32765 -s <LAN_SUBNET> -j ACCEPT
+
+########################################
+# 6. Tuple E
+########################################
+
+allow any 32766 0.0.0.0/0 any <LAN_SUBNET> in
+-A ufw-user-input -p tcp --dport 32766 -s <LAN_SUBNET> -j ACCEPT
+-A ufw-user-input -p udp --dport 32766 -s <LAN_SUBNET> -j ACCEPT
+
+########################################
+# 7. Tuple F
+########################################
+
+allow any 32767 0.0.0.0/0 any <LAN_SUBNET> in
+-A ufw-user-input -p tcp --dport 32767 -s <LAN_SUBNET> -j ACCEPT
+-A ufw-user-input -p udp --dport 32767 -s <LAN_SUBNET> -j ACCEPT
+
+########################################
+# 8. Logging
+########################################
+
+-A ufw-logging-deny -m conntrack --ctstate INVALID -j LOG --log-prefix "[UFW AUDIT INVALID] " -m limit --limit 3/min --limit-burst 10
+-A ufw-logging-deny -j LOG --log-prefix "[UFW BLOCK] " -m limit --limit 3/min --limit-burst 10
+-A ufw-logging-allow -j LOG --log-prefix "[UFW ALLOW] " -m limit --limit 3/min --limit-burst 10
+-I ufw-before-logging-input -j LOG --log-prefix "[UFW AUDIT] " -m conntrack --ctstate NEW -m limit --limit 3/min --limit-burst 10
+-I ufw-before-logging-output -j LOG --log-prefix "[UFW AUDIT] " -m conntrack --ctstate NEW -m limit --limit 3/min --limit-burst 10
+-I ufw-before-logging-forward -j LOG --log-prefix "[UFW AUDIT] " -m conntrack --ctstate NEW -m limit --limit 3/min --limit-burst 10
+
+########################################
+# 9. RATE LIMITING
+########################################
+
+-A ufw-user-limit -m limit --limit 3/minute -j LOG --log-prefix "[UFW LIMIT BLOCK] "
+-A ufw-user-limit -j REJECT
+-A ufw-user-limit-accept -j ACCEPT
+
+########################################
+# END
+########################################
+
+COMMIT

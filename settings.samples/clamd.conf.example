@@ -1,0 +1,153 @@
+########################################
+# 1. Daemon & Socket Settings
+########################################
+
+Debug false
+ExitOnOOM false
+FixStaleSocket true
+Foreground false
+LeaveTemporaryFiles false
+LocalSocket /var/run/clamav/clamd.ctl
+LocalSocketGroup clamav
+LocalSocketMode 660
+User clamav
+
+########################################
+# 2. Scan Options
+########################################
+
+ScanMail true
+ScanArchive true
+ScanRAR true
+ScanRAR5 true
+ScanPDF true
+ScanSWF true
+ScanPE true
+ScanELF true
+DetectPUA true
+DetectBrokenExecutables true
+HeuristicAlerts true
+HeuristicScanPrecedence true
+PhishingSignatures true
+PhishingScanURLs true
+
+########################################
+
+
+########################################
+# 3. Database & Self-Check
+########################################
+
+DatabaseDirectory /var/lib/clamav
+OfficialDatabaseOnly false
+SelfCheck 3600
+
+
+########################################
+# 4. Scan Targets & Behaviour
+########################################
+
+AlgorithmicDetection true
+AllowAllMatchScan true
+CrossFilesystems true
+ScanArchive true
+ScanELF true
+ScanHTML true
+ScanHWP3 true
+ScanMail true
+ScanOLE2 true
+ScanPartialMessages false
+ScanPDF true
+ScanPE true
+ScanSWF true
+ScanXMLDOCS true
+StructuredDataDetection false
+
+
+########################################
+# 5. Limits, Resources & Performance
+########################################
+
+CommandReadTimeout 30
+ForceToDisk false
+IdleTimeout 30
+
+# Connection queue (for clamd clients like clamdscan)
+MaxConnectionQueueLength 15
+
+# Recursion / directory limits (avoid pathological trees & archives)
+MaxDirectoryRecursion 10
+MaxRecursion 10
+MaxFiles 5000
+
+# Size limits – "skim" large media rather than full deep-dives
+MaxEmbeddedPE 10M
+MaxFileSize 500M
+MaxScanSize 1G
+
+MaxHTMLNoTags 2M
+MaxHTMLNormalize 10M
+MaxIconsPE 100
+MaxPartitions 50
+MaxQueue 100
+MaxRecHWP3 16
+MaxScanTime 120000
+MaxScriptNormalize 5M
+MaxThreads 3
+MaxZipTypeRcg 1M
+OnAccessMaxFileSize 5M
+PCREMatchLimit 10000
+PCREMaxFileSize 25M
+PCRERecMatchLimit 5000
+ReadTimeout 180
+SendBufTimeout 200
+StreamMaxLength 2G
+
+
+########################################
+# 6. Paths, Symlinks & Filesystem Behaviour
+########################################
+
+FollowDirectorySymlinks false
+FollowFileSymlinks false
+PartitionIntersection false
+
+
+########################################
+# 7. Heuristics, Phishing & PUA
+########################################
+
+DetectPUA false
+ExtendedDetectionInfo true
+HeuristicScanPrecedence false
+PhishingAlwaysBlockCloak false
+PhishingAlwaysBlockSSLMismatch false
+PhishingScanURLs false
+PhishingSignatures true
+
+
+########################################
+# 8. Cache & Certificate Behaviour
+########################################
+
+DisableCache false
+DisableCertCheck falsewwwwwww		
+
+
+########################################
+
+DisableCache false
+DisableCertCheck false
+
+########################################
+# 9. Bytecode & Advanced
+########################################
+
+Bytecode false
+BytecodeSecurity TrustSigned
+BytecodeTimeout 60000
+OLE2BlockMacros false
+
+########################################
+# END
+######################################

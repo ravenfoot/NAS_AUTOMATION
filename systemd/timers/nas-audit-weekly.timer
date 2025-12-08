@@ -1,0 +1,11 @@
+[Unit]
+Description=NAS Weekly Audit (Monday 00:30) 📋
+
+[Timer]
+# Run Mondays at 00:30
+OnCalendar=Mon *-*-* 00:30:00
+Persistent=true
+AccuracySec=5min
+
+[Install]
+WantedBy=timers.target

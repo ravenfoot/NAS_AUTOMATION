@@ -1,0 +1,12 @@
+[07/12/25 12:47:14] [INFO] 🔧 Media Services Maintenance Cycle initiated.
+[07/12/25 12:47:14] [INFO] 📡 Initiating MiniDLNA Surgical Refresh…
+[07/12/25 12:47:14] [INFO] 🧨 Standing down MiniDLNA service...
+[07/12/25 12:47:19] [INFO] 🧠 MiniDLNA database purged (files.db).
+[07/12/25 12:47:19] [INFO] 🚀 Restarting MiniDLNA…
+[07/12/25 12:47:19] [INFO] ⏳ Allowing 10 seconds for MiniDLNA to settle and begin indexing…
+[07/12/25 12:47:29] [SUCCESS] ✅ MiniDLNA online and rebuilding index.
+[07/12/25 12:47:29] [INFO] 🛰️ Verifying service beacons (DLNA / Plex / SMB / NFS)…
+[07/12/25 12:47:29] [INFO] ✅ MiniDLNA Beacon active (Port 8200).
+[07/12/25 12:47:29] [INFO] ✅ Plex Server active (Port 32400).
+[07/12/25 12:47:29] [INFO] ✅ Samba Export active (Port 445).
+[07/12/25 12:47:29] [INFO] ✅ NFS Export active (Port 2049).

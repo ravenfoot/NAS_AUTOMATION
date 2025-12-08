@@ -1,0 +1,17 @@
+[Unit]
+Description=NAS Boot Verification & Health Check 🖖
+After=network.target local-fs.target
+# We want this to run after mounts are definitely settled
+RequiresMountsFor=/mnt/nas_sys_core /mnt/backup /mnt/media
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/nas_stage_boot_verify.sh
+# Optional: User to run as. Root is usually required for smartctl/btrfs checks.
+User=root
+Group=root
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,95 @@
+[07/12/25 12:43:18] [INFO] 🖖 Boot sequence initiated. Running diagnostics...
+[07/12/25 12:43:33] [INFO] 🖖 Boot sequence initiated. Running diagnostics...
+[07/12/25 12:43:33] [INFO] --- 🔍 Running Sensor Sweep (SMART) ---
+[07/12/25 12:43:33] [INFO] ✅ Drive /dev/sda reporting healthy.
+[07/12/25 12:43:33] [INFO] ✅ Drive /dev/sdb reporting healthy.
+[07/12/25 12:43:33] [INFO] ✅ Drive /dev/sdc reporting healthy.
+[07/12/25 12:43:34] [INFO] ✅ Drive /dev/sdd reporting healthy.
+[07/12/25 12:43:34] [INFO] ✅ Drive /dev/sde reporting healthy.
+[07/12/25 12:43:34] [INFO] ✅ System MMC /dev/mmcblk0 detected online.
+[07/12/25 12:43:34] [INFO] --- ℹ️ Verifying Cargo Manifest (Mounts) ---
+[07/12/25 12:43:34] [INFO] ✅ /mnt/nas_sys_core mounted and writable.
+[07/12/25 12:43:34] [INFO] ✅ /mnt/media mounted and writable.
+[07/12/25 12:43:34] [INFO] ✅ /mnt/backup mounted and writable.
+[07/12/25 12:43:34] [INFO] ✅ /mnt/storage mounted and writable.
+[07/12/25 12:43:34] [INFO] ✅ /mnt/media_ro mounted (RO verified).
+[07/12/25 12:43:34] [INFO] --- 📦 Btrfs Stasis Pod Integrity ---
+[07/12/25 12:43:34] [INFO] ✅ Btrfs device stats clean (zero errors).
+[07/12/25 12:43:34] [INFO] ✅ Btrfs pool optimal: 2 devices online.
+[07/12/25 12:43:34] [INFO] --- 🛡️ Integrity Check (fstab) ---
+[07/12/25 12:43:34] [INFO] ✅ /etc/fstab matches verified template.
+[07/12/25 12:43:34] [SUCCESS] ✅ All systems green. Boot verification complete.
+[07/12/25 12:43:50] [INFO] 🛰️ Initiating Mullvad Cloak Diagnostic…
+[07/12/25 12:43:50] [INFO] ✅ Mullvad daemon active.
+[07/12/25 12:43:50] [SUCCESS] ✅ Cloak engaged. Interface wg0-mullvad present.
+[07/12/25 12:44:07] [INFO] 🛰️ Initiating Mullvad Cloak Diagnostic…
+[07/12/25 12:44:07] [INFO] ✅ Mullvad daemon active.
+[07/12/25 12:44:07] [SUCCESS] ✅ Cloak engaged. Interface wg0-mullvad present.
+[07/12/25 12:44:20] [INFO] 🛡️ Beginning UFW shield verification cycle…
+[07/12/25 12:44:20] [INFO] 🛡️ Verifying shield generator status…
+[07/12/25 12:44:20] [INFO] ✅ UFW shield is active.
+[07/12/25 12:44:20] [INFO] 🔐 Auditing access control lists…
+[07/12/25 12:44:20] [WARNING] ⚠️ Critical subnet (<LAN_SUBNET>) not found!
+[07/12/25 12:44:20] [WARNING] ⚠️ If default policy is DENY, remote access may fail.
+[07/12/25 12:44:39] [INFO] 📦 Initiating Stasis Pod (Backup) diagnostics...
+[07/12/25 12:44:39] [INFO] 📡 Querying repository metadata...
+[07/12/25 12:44:40] [SUCCESS] ✅ Repository is accessible and structurally valid.
+[07/12/25 12:44:43] [INFO] ℹ️ Latest Snapshot: tower-2025-11-23_15-16-52 (Sun, 2025-11-23)
+[07/12/25 12:44:43] [WARNING] ⚠️ Backup may be stale! Last snapshot: tower-2025-11-23_15-16-52
+[07/12/25 12:44:56] [INFO] 🛡️ Starting ClamAV Security Sweep…
+[07/12/25 12:44:56] [INFO] 🕵️ Raven scouting party launched – initiating malware sweep…
+[07/12/25 12:44:56] [INFO] 📂 Scanning filesystems: /boot/efi / /mnt/media /mnt/media_ro /mnt/backup
+[07/12/25 12:47:14] [INFO] 🔧 Media Services Maintenance Cycle initiated.
+[07/12/25 12:47:14] [INFO] 📡 Initiating MiniDLNA Surgical Refresh…
+[07/12/25 12:47:14] [INFO] 🧨 Standing down MiniDLNA service...
+[07/12/25 12:47:19] [INFO] 🧠 MiniDLNA database purged (files.db).
+[07/12/25 12:47:19] [INFO] 🚀 Restarting MiniDLNA…
+[07/12/25 12:47:19] [INFO] ⏳ Allowing 10 seconds for MiniDLNA to settle and begin indexing…
+[07/12/25 12:47:29] [SUCCESS] ✅ MiniDLNA online and rebuilding index.
+[07/12/25 12:47:29] [INFO] 🛰️ Verifying service beacons (DLNA / Plex / SMB / NFS)…
+[07/12/25 12:47:29] [INFO] ✅ MiniDLNA Beacon active (Port 8200).
+[07/12/25 12:47:29] [INFO] ✅ Plex Server active (Port 32400).
+[07/12/25 12:47:29] [INFO] ✅ Samba Export active (Port 445).
+[07/12/25 12:47:29] [INFO] ✅ NFS Export active (Port 2049).
+[07/12/25 12:48:39] [INFO] 🚀 Initiating Security Update & Maintenance Cycle...
+[07/12/25 12:48:39] [INFO] 🔭 Refreshing repository index (apt update)...
+[07/12/25 12:48:54] [INFO] 🛡️ Applying security patches (unattended-upgrades)...
+[07/12/25 12:48:59] [SUCCESS] ✅ Security patches applied (see details log).
+[07/12/25 12:48:59] [INFO] 🧹 Sweeping decks (autoremove)...
+[07/12/25 12:49:01] [INFO] ✅ No reboot required.
+[07/12/25 12:49:01] [INFO] 🧹 Archiving maintenance logs...
+[07/12/25 12:49:01] [INFO] 📦 Old logs compressed.
+[07/12/25 12:49:01] [INFO] 🗑️ Archived logs older than 30 days purged.
+[07/12/25 12:49:01] [SUCCESS] 🛠️ Maintenance cycle complete.
+[07/12/25 12:56:27] [INFO] 🖖 Boot sequence initiated. Running diagnostics...
+[07/12/25 12:56:27] [INFO] 🛡️ Running shield diagnostics...
+[07/12/25 12:56:27] [INFO] --- 🔍 Running Sensor Sweep (SMART) ---
+[07/12/25 12:56:27] [INFO] ✅ Drive /dev/sda reporting healthy.
+[07/12/25 12:56:27] [INFO] ✅ Drive /dev/sdb reporting healthy.
+[07/12/25 12:56:27] [INFO] ✅ Shields operational (UFW is active).
+[07/12/25 12:56:27] [INFO] ✅ Drive /dev/sdc reporting healthy.
+[07/12/25 12:56:27] [INFO] ✅ Verified LAN access for <SAMPLE_IP>
+[07/12/25 12:56:28] [INFO] ✅ Drive /dev/sdd reporting healthy.
+[07/12/25 12:56:28] [INFO] ✅ Drive /dev/sde reporting healthy.
+[07/12/25 12:56:28] [INFO] ✅ System MMC /dev/mmcblk0 detected online.
+[07/12/25 12:56:28] [INFO] --- ℹ️ Verifying Cargo Manifest (Mounts) ---
+[07/12/25 12:56:28] [INFO] ✅ /mnt/nas_sys_core mounted and writable.
+[07/12/25 12:56:28] [INFO] ✅ /mnt/media mounted and writable.
+[07/12/25 12:56:28] [INFO] ✅ /mnt/backup mounted and writable.
+[07/12/25 12:56:28] [INFO] ✅ /mnt/storage mounted and writable.
+[07/12/25 12:56:28] [INFO] ✅ /mnt/media_ro mounted (RO verified).
+[07/12/25 12:56:28] [INFO] --- 📦 Btrfs Stasis Pod Integrity ---
+[07/12/25 12:56:28] [INFO] ✅ Btrfs device stats clean (zero errors).
+[07/12/25 12:56:28] [INFO] ✅ Btrfs pool optimal: 2 devices online.
+[07/12/25 12:56:28] [INFO] --- 🛡️ Integrity Check (Fstab) ---
+[07/12/25 12:56:28] [INFO] ✅ /etc/fstab matches verified template.
+[07/12/25 12:56:28] [SUCCESS] ✅ All systems green. Boot verification complete.
+[07/12/25 12:56:33] [INFO] 🛰️ Verifying cloaking device status...
+[07/12/25 12:56:33] [INFO] ✅ VPN Daemon running.
+[07/12/25 12:56:33] [WARNING] ⚠️ Interface wg0-mullvad missing. Attempting reconnection...
+[07/12/25 12:56:38] [CRITICAL] 🛑 Cloak failure. VPN interface could not be raised.
+[07/12/25 15:02:08] [INFO] 🛡️ Beginning UFW shield verification cycle…
+[07/12/25 15:02:08] [INFO] 🛡️ Verifying shield generator status…
+[07/12/25 15:02:08] [INFO] ✅ UFW shield is active.
+[07/12/25 15:02:08] [INFO] 🔐 Auditing access control lists…
+[07/12/25 15:02:08] [INFO] ✅ LAN access rule present for <SAMPLE_IP>

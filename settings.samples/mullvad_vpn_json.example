@@ -1,0 +1,28 @@
+
+
+########################################
+# 1. Mullvad Setting Sample
+########################################
+
+# Notes: I consciously configured the VPN deliberately as part of the NAS threat model. This is simply a sample snippet.
+
+
+{
+  "relay_settings": {
+    "normal": {
+      "location": {
+        "only": { "location": { "country": "se" } }
+      },
+      "tunnel_protocol": "wireguard"
+    }
+  },
+  "dns_options": {
+    "block_ads": true,
+    "block_trackers": true,
+    "block_malware": true
+  }
+}
+
+########################################
+# END
+########################################
