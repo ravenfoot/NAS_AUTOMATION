@@ -1,10 +1,27 @@
-#!/usr/bin/env bash
-# ==============================================================================
-# 🖖 NAS PROJECT — START HERE
-# ==============================================================================
-# Purpose: A reviewer-friendly guide to navigating this repository.
-# Audience: Engineers, SREs, DevOps reviewers, hiring managers.
-# ==============================================================================
+<h5><code>#!/usr/bin/env markdown</code><br>
+<code>#==============================================================================</code><br>
+<code># 🖖 NAS PROJECT — START HERE</code><br>
+<code>#==============================================================================</code><br>
+<code># Purpose: A reviewer-friendly guide to navigating this repository.</code><br>
+<code># Audience: Engineers, SREs, DevOps reviewers, hiring managers.</code><br>
+<code># Stack: Ubuntu · systemd · Bash · btrfs · MergerFS · Borg · Mullvad · UFW · MiniDLNA · Plex</code><br>
+<code># Version: Rolling</code><br>
+<code># License: Apache-2.0</code><br>
+<code># Status: Active</code><br>
+<code># Author: Ravenfoot</code><br>
+<code>#==============================================================================</code></h5>
+
+
+
+## 0. 🧬 Ravenfoot projects
+
+* **a)** [Ravenfoot Calculator (Legacy)](https://github.com/ravenfoot/Ravenfoot.Calculator.Legacy.Edition)
+* **b)** [Ravenfoot Passwords — P100 (Teletext Edition)](https://github.com/ravenfoot/Ravenfoot.Passwords.P100.Teletext-Edition)
+* **c)** [Ravenfoot Rune Timer (Dota 2)](https://github.com/ravenfoot/Ravenfoot.Rune.Timer.Dota.2)
+* **d)** Ravenfoot NAS Automation (Bash Edition) <--- You are here
+* **e)** [Ravenfoot Webpage](https://github.com/ravenfoot/Ravenfoot.Webpage)
+* **f)** [Ravenfoot Scryer — AoW Overlay (Stage 1)](https://github.com/ravenfoot/Ravenfoot.Scryer.AoW.Overlay.1)
+
 
 If you're skimming this repository and want the **fast lane**, here’s the route:
 
@@ -108,6 +125,6 @@ What that means in practice:
 If this project helps you, teaches you, or inspires you, leaving a ⭐ on GitHub or referencing the repo is always appreciated.
 
 
-# ==============================================================================
-# 🛑 END
-# ==============================================================================
+<code>#==============================================================================</code><br>
+<code>#🛑 END</code><br>
+<code>#==============================================================================</code></h5>
